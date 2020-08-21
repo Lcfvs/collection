@@ -58,10 +58,11 @@ const result = document
         .withData([
           property
             .withName('search')
-            .withPrompt('Search an item')
+            .withPrompt('Item name to search')
             .withValue('product')
         ])
         .withHref('/items/search')
+        .withPrompt('Search an item')
         .withRel('search')
     ])
     .withScripts([
@@ -72,4 +73,74 @@ const result = document
     .withVersion('1.0'))
 
 console.log(JSON.stringify(result, null, 2))
+```
+
+Resulting to
+```json
+{
+  "collection": {
+    "href": "/items",
+    "version": "1.0",
+    "error": {
+      "code": "error code",
+      "message": "error message",
+      "title": "error title",
+      "details": [
+        {
+          "message": "detail message",
+          "name": "detail name"
+        }
+      ]
+    },
+    "items": [
+      {
+        "data": [
+          {
+            "name": "id",
+            "prompt": "Get the id",
+            "value": "1"
+          },
+          {
+            "name": "name",
+            "prompt": "Get the name",
+            "value": "product"
+          }
+        ],
+        "href": "/items/1",
+        "links": [
+          {
+            "href": "/items/1/rss",
+            "rel": "rss"
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "href": "/items",
+        "rel": "top"
+      }
+    ],
+    "queries": [
+      {
+        "href": "/items/search",
+        "prompt": "Search an item",
+        "rel": "search",
+        "data": [
+          {
+            "name": "search",
+            "prompt": "Item name to search",
+            "value": "product"
+          }
+        ]
+      }
+    ],
+    "scripts": [
+      {
+        "integrity": "integrity string",
+        "src": "/main.js"
+      }
+    ]
+  }
+}
 ```
