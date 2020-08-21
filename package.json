@@ -1,6 +1,6 @@
 {
   "name": "@lcf.vs/collection",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Collection+JSON implementation",
   "main": "index.js",
   "type": "module",
