@@ -1,3 +1,6 @@
+/**
+ * @module collection
+ */
 export { default as collection } from './lib/collection.js'
 export { default as document } from './lib/document.js'
 export { default as detail } from './lib/detail.js'
