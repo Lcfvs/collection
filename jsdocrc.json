@@ -1,10 +1,10 @@
 {
   "opts": {
-    "recurse": true,
-    "destination": "doc"
+    "destination": "docs",
+    "recurse": true
   },
   "source": {
-    "exclude": ["doc", "node_modules"],
+    "exclude": ["docs", "node_modules"],
     "include": ["."]
   },
   "tags": {
