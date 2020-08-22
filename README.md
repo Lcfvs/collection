@@ -14,7 +14,8 @@ import {
   link,
   property,
   query,
-  script
+  script,
+  template
 } from '@lcf.vs/collection'
 
 const result = document
@@ -69,6 +70,19 @@ const result = document
       script
         .withIntegrity('integrity string')
         .withSrc('/main.js')
+    ])
+    .withTemplate([
+      template
+        .withData([
+          property
+            .withName('id')
+            .withPrompt('Get the id')
+            .withValue('1'),
+          property
+            .withName('name')
+            .withPrompt('Get the name')
+            .withValue('product')
+        ])
     ])
     .withVersion('1.0'))
 
@@ -139,6 +153,22 @@ Resulting to
       {
         "integrity": "integrity string",
         "src": "/main.js"
+      }
+    ],
+    "template": [
+      {
+        "data": [
+          {
+            "name": "id",
+            "prompt": "Get the id",
+            "value": "1"
+          },
+          {
+            "name": "name",
+            "prompt": "Get the name",
+            "value": "product"
+          }
+        ]
       }
     ]
   }
