@@ -1,10 +1,11 @@
 {
   "name": "@lcf.vs/collection",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A Collection+JSON implementation",
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "jsdoc": "jsdoc -c jsdocrc.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +24,7 @@
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1"
+    "eslint-plugin-standard": "^4.0.1",
+    "jsdoc": "^3.6.5"
   }
 }
